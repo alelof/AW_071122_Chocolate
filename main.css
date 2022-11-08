@@ -1,10 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Nunito:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Nunito:wght@400;600;700&family=Merriweather:wght@400;700&display=swap');
+
+:root {
+    --main-bg-color: #f7f7f7;
+    --main-font-color: #424140;
+    --second-bg-color: #fff;
+}
 
 body {
     font-family: 'Nunito', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: rgb(255, 250, 244);
+    background-color: var(--main-bg-color);
+    color: var(--main-font-color);
 }
 
 header {
@@ -27,8 +34,10 @@ header ul {
 
 header li {
     display: inline;
-    font-size: 0.8rem;
     margin: 0 1.5rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
 h1,
@@ -40,6 +49,14 @@ h4 {
     font-weight: 700;
 }
 
+h5 {
+    font-family: 'Merriweather', serif;
+}
+
+h6 {
+    margin: 0;
+}
+
 p {
     line-height: 1.3rem;
     font-size: 1rem;
@@ -47,20 +64,20 @@ p {
     text-align: justify;
 }
 
-.articleImg {
+.articleBgImg {
     height: 22rem;
     background-image: url('chocolate.jpg');
+    background-position: center;
     background-size: cover;
 }
 
-.positioned {
+article {
     position: relative;
     top: -10rem;
     width: 60%;
     margin: 0 auto 0 auto;
     padding: 2rem 3rem;
-    background-color: rgb(255, 250, 244);
-
+    background-color: var(--main-bg-color);
 }
 
 .articleHeader {
@@ -68,18 +85,29 @@ p {
     margin-bottom: 4rem;
 }
 
+hr {
+    margin-top: 4rem;
+    width: 10%;
+    display: none;
+}
+
 .firstP {
     font-weight: 600;
 }
 
-.imgContainer {
+.recipeImgContainer {
     margin: 3rem 0;
     display: flex;
     justify-content: center;
 }
 
 .recipeImg {
-    width: 70%;
+    width: 80%;
+}
+
+section {
+    background-color: var(--second-bg-color);
+    padding: 1rem 3rem 3rem 3rem
 }
 
 .ingredients {
@@ -95,6 +123,17 @@ footer {
 }
 
 footer img {
-    width: 5%;
+    width: 7%;
     margin-bottom: 0.5rem;
 }
+
+
+
+@media only screen and (max-width: 600px) {
+    hr {
+        display: block;
+    }
+    nav{
+        display: none;
+    }
+  }
